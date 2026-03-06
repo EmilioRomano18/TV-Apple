@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Apple TV</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+        }
+
+        .hero {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-info {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .row-title {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .scrolling-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 1rem;
+        }
+
+        .miniatura {
+            width: 250px;
+            height: 140px;
+            display: inline-block;
+            margin-right: 10px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .miniatura:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <h4 class="m-0 text-white">Apple TV+</h4>
+        <nav class="d-flex gap-4">
+            <a href="#" class="text-white text-decoration-none">Inicio</a>
+            <a href="#" class="text-white text-decoration-none">Películas</a>
+            <a href="#" class="text-white text-decoration-none">Series</a>
+        </nav>
+    </header>
+
+    <section id="zona-destacada" class="hero" style="
+        background-image: url('https://via.placeholder.com/1600x800');
+        margin-top: 80px;
+      ">
+        <div class="hero-info">
+            <h1 id="titulo-principal">Título destacado</h1>
+            <p id="descripcion-principal">
+                Aquí va la descripción de la serie o película.
+            </p>
+            <small id="duracion-principal">Duración: 120 min</small>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <h4 class="row-title">Populares ahora</h4>
+        <div class="scrolling-wrapper d-flex">
+            <div class="miniatura" style="background-image: url('Imagenes/Aparemcias.webp')" data-titulo="APARENCIAS"
+                data-descripcion="Misterio" data-duracion="100 min"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/Inocente.webp')"
+                data-titulo="PRESUNTO INOCENTE" data-descripcion="Crimen" data-duracion="110 min"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/Ladrones2.webp')"
+                data-titulo="LADRONES DE DROGAS" data-descripcion="Crimen" data-duracion="100 min"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/see.webp')" data-titulo="SEE"
+                data-descripcion="Aventuras" data-duracion="110 min"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/Vicios.webp')" data-titulo="VICIOS OCULTOS"
+                data-descripcion="Drama" data-duracion="100 min"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/the\ house.webp')" data-titulo="THE STUDIO"
+                data-descripcion="Comedia" data-duracion="110 min"></div>
+        </div>
+        <hr />
+
+        <h4 class="row-title">Recomendado para ti</h4>
+        <div class="scrolling-wrapper d-flex">
+            <div class="miniatura" style="background-image: url('Imagenes/abismo.webp')" data-titulo="EL ABISMO SECRETO"
+                data-descripcion="Suspenso" data-duracion="45 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/asesinos.webp')"
+                data-titulo="LOS ASESINOS DE LA LUNA" data-descripcion="Crimen" data-duracion="50 min por episodio">
+            </div>
+            <div class="miniatura" style="background-image: url('Imagenes/gostogn.webp')" data-titulo="GHOSTING"
+                data-descripcion="Accion" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/napolen.webp')" data-titulo="NAPOLEON"
+                data-descripcion="Drama" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/wolfs.webp')" data-titulo="WOLFS"
+                data-descripcion="Accion" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/separacion.webp')" data-titulo="SEPARACION"
+                data-descripcion="Suspenso" data-duracion="50 min por episodio"></div>
+        </div>
+        <hr />
+
+        <h4 class="row-title">Comedia</h4>
+        <div class="scrolling-wrapper d-flex">
+            <div class="miniatura" style="background-image: url('Imagenes/chese.webp')" data-titulo="GOVERNMENT CHEESE"
+                data-descripcion="Comedia" data-duracion="45 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/corman.webp')" data-titulo="MR.CORMAN"
+                data-descripcion="Comedia" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/littleamerica.webp')"
+                data-titulo="LITTLE AMERICA" data-descripcion="Comedia" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/mono.webp')" data-titulo="MONO MALO"
+                data-descripcion="Comedia" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/platonio.webp')" data-titulo="PLATONICO"
+                data-descripcion="Comedia" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/tedLaso.webp')" data-titulo="TED LASSO"
+                data-descripcion="Comedia" data-duracion="50 min por episodio"></div>
+        </div>
+        <hr />
+        <h4 class="row-title">Todos los programas de no ficcion</h4>
+        <div class="scrolling-wrapper d-flex">
+            <div class="miniatura" style="background-image: url('Imagenes/cowboy.webp')" data-titulo="COWBOY CARTEL"
+                data-descripcion="Documental" data-duracion="45 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/lenon.webp')" data-titulo="JOHN LENNON"
+                data-descripcion="Documental" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/moto.webp')" data-titulo="EL MUNDO EN MOTO"
+                data-descripcion="Documental" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/vietnam.webp')" data-titulo="VIETNAM"
+                data-descripcion="Documental" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/theline.webp')" data-titulo="THE LINE"
+                data-descripcion="Documental" data-duracion="50 min por episodio"></div>
+            <div class="miniatura" style="background-image: url('Imagenes/dinastia.webp')" data-titulo="LA DINASTIA"
+                data-descripcion="Documental" data-duracion="50 min por episodio"></div>
+        </div>
+        <hr />
+        <footer>
+            <img src="Imagenes/Captura de pantalla 2025-05-18 114523.png" alt="footer" style="width: 100%" />
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".miniatura").on("click", function () {
+                const titulo = $(this).attr("data-titulo");
+                const descripcion = $(this).attr("data-descripcion");
+                const duracion = $(this).attr("data-duracion");
+                const imagen = $(this).css("background-image");
+
+                $("#titulo-principal").text(titulo);
+                $("#descripcion-principal").text(descripcion);
+                $("#duracion-principal").text("Duración: " + duracion);
+                $("#zona-destacada").css("background-image", imagen);
+            });
+        });
+    </script>
+</body>
+
+</html>
